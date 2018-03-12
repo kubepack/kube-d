@@ -1,5 +1,14 @@
 items:
-- package: github.com/kubepack/kube-a
-  branch: test-6
-- package: github.com/kubepack/kube-b
-  branch: test-6
+- branch: test-6
+  metadata:
+    creationTimestamp: null
+  package: github.com/kubepack/kube-a
+  patches:
+  - /home/tigerworks/go/src/github.com/kubepack/kube-d/manifests/patch/github.com/kubepack/kube-a/nginx-a.Deployment.apps.yaml
+- branch: test-6
+  metadata:
+    creationTimestamp: null
+  package: github.com/kubepack/kube-b
+  patches:
+  - /home/tigerworks/go/src/github.com/kubepack/kube-d/manifests/patch/github.com/kubepack/kube-b/nginx-b.Deployment.apps.yaml
+metadata: {}
